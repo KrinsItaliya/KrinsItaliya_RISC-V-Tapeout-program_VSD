@@ -94,3 +94,142 @@ sudo apt install gtkwave
 
 ### 💡 GTKWave is typically used alongside simulators like Icarus Verilog to open .vcd files and visually inspect simulation outputs, aiding in debugging and validation.
 <img width="940" height="342" alt="image" src="https://github.com/user-attachments/assets/0c7609e6-c289-4e0f-a579-9bfd0dccb47d" />
+<img width="1488" height="633" alt="gtkwave_installed" src="https://github.com/user-attachments/assets/daf943df-d852-4496-98dc-26dee928b56b" />
+
+
+# 📘 Week 0: Environment Setup for Open-Source VLSI Design
+
+This week focuses on setting up a complete open-source EDA environment for ASIC design. We’ll install all required tools like `ngspice`, `magic`, `docker`, and `OpenLane` to begin working on RTL-to-GDSII flows.
+
+---
+
+## 🧪 ngspice – Circuit Simulation Tool
+
+`ngspice` is a powerful mixed-signal simulator used for validating analog and digital circuit designs.
+
+📥 **Download** from: https://sourceforge.net/projects/ngspice/files/
+
+```bash
+tar -zxvf ngspice-37.tar.gz
+cd ngspice-37
+mkdir release && cd release
+../configure --with-x --with-readline=yes --disable-debug
+make
+sudo make install
+```
+
+✅ *To verify*, run:
+```bash
+ngspice
+```
+
+You should see the ngspice terminal interface.
+![ngspice_installed](https://github.com/user-attachments/assets/964353f5-c46e-42fc-8b0e-197a4770cc29)
+
+
+---
+
+## 🧱 Magic – VLSI Layout Editor
+
+`magic` is used for physical layout design and DRC (Design Rule Check).
+
+### Install Dependencies:
+```bash
+sudo apt-get install m4 tcsh csh libx11-dev tcl-dev tk-dev \
+libcairo2-dev mesa-common-dev libglu1-mesa-dev libncurses-dev
+```
+
+### Build and Install:
+```bash
+git clone https://github.com/RTimothyEdwards/magic
+cd magic
+./configure
+make
+sudo make install
+```
+
+✅ *To verify*, run:
+```bash
+magic
+```
+
+GUI should launch if installation is successful.
+
+---
+![magic_installed](https://github.com/user-attachments/assets/fab6a21d-57ff-4563-b53d-c023c5904648)
+
+
+## 🐳 Docker – Containerized Toolchain Support
+
+Docker enables us to run OpenLane and other tools in a clean, isolated environment.
+
+### Install Docker:
+```bash
+sudo apt-get update && sudo apt-get upgrade
+sudo apt install -y build-essential python3 python3-venv python3-pip make git
+
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor \
+-o /usr/share/keyrings/docker-archive-keyring.gpg
+
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] \
+https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | \
+sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io
+```
+<img width="736" height="409" alt="docker_installed" src="https://github.com/user-attachments/assets/28977aef-4159-4d59-9183-14f076290628" />
+
+### Post-Install (Optional):
+```bash
+sudo docker run hello-world
+sudo groupadd docker
+sudo usermod -aG docker $USER
+sudo reboot
+```
+
+After reboot, verify again with:
+```bash
+docker run hello-world
+```
+
+---
+<img width="736" height="409" alt="docker_installed" src="https://github.com/user-attachments/assets/28977aef-4159-4d59-9183-14f076290628" />
+
+## 🚀 OpenLane – RTL to GDSII Flow
+
+OpenLane is a digital ASIC design flow tool that automates synthesis, floorplanning, placement, routing, and GDSII generation.
+
+### Clone & Build:
+```bash
+cd $HOME
+git clone https://github.com/The-OpenROAD-Project/OpenLane
+cd OpenLane
+make
+make test
+```
+
+This step downloads the Docker image and runs a test flow to ensure everything is working correctly.
+
+---
+
+## ✅ Week 0 Summary
+
+| ✅ Task | 📌 Outcome |
+|--------|------------|
+| Installed ngspice | Analog/mixed-signal simulation ready |
+| Installed Magic | Layout editing environment set up |
+| Docker Configured | Container-based flow environment established |
+| OpenLane Setup | RTL to GDSII toolchain functional |
+
+---
+
+## 🖼️ Output Screenshots (Expected)
+
+- `ngspice_installed.png` – ngspice command line opened successfully  
+- `magic_installed.png` – Magic GUI launched  
+- `dependencies_output.png` – All dependencies installed correctly  
+- `docker_installed.png` – Docker test image ran successfully  
+
+---
