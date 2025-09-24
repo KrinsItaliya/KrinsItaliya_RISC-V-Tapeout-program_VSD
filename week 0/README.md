@@ -96,11 +96,6 @@ sudo apt install gtkwave
 <img width="940" height="342" alt="image" src="https://github.com/user-attachments/assets/0c7609e6-c289-4e0f-a579-9bfd0dccb47d" />
 <img width="1488" height="633" alt="gtkwave_installed" src="https://github.com/user-attachments/assets/daf943df-d852-4496-98dc-26dee928b56b" />
 
-
-# 📘 Week 0: Environment Setup for Open-Source VLSI Design
-
-This week focuses on setting up a complete open-source EDA environment for ASIC design. We’ll install all required tools like `ngspice`, `magic`, `docker`, and `OpenLane` to begin working on RTL-to-GDSII flows.
-
 ---
 
 ## 🧪 ngspice – Circuit Simulation Tool
@@ -179,8 +174,6 @@ sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io
 ```
-<img width="736" height="409" alt="docker_installed" src="https://github.com/user-attachments/assets/28977aef-4159-4d59-9183-14f076290628" />
-
 ### Post-Install (Optional):
 ```bash
 sudo docker run hello-world
@@ -225,11 +218,6 @@ This step downloads the Docker image and runs a test flow to ensure everything i
 
 ---
 
-## 🖼️ Output Screenshots (Expected)
-
-- `ngspice_installed.png` – ngspice command line opened successfully  
-- `magic_installed.png` – Magic GUI launched  
-- `dependencies_output.png` – All dependencies installed correctly  
-- `docker_installed.png` – Docker test image ran successfully  
+Docker test image ran successfully  
 
 ---
