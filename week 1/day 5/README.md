@@ -335,6 +335,7 @@ Loops are useful in hardware description, but it's essential to distinguish thei
    ```
 
 7. output of gls
+![demux_case_gls_waveform](https://github.com/user-attachments/assets/1da54ec2-82f3-4bd2-86c1-2719c3351708)
 
 
 
