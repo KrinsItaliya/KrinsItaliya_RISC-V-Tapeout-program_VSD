@@ -96,18 +96,18 @@ Here we use an multiple modules in this file we run flat and hierarchical synthe
 <img width="1636" height="997" alt="sub_module1_netlist" src="https://github.com/user-attachments/assets/9746e77d-629f-4e88-b523-dbc01fe1310d" />
 
 
-## \U0001f4a1 Various Flop Coding Styles and Optimization
+## Various Flop Coding Styles and Optimization
 
-### \U0001f4dd Theory
+### Theory
 Flip-flops are the fundamental storage elements in synchronous digital circuits. The way you write the Verilog code for a flip-flop directly influences the hardware that the synthesis tool creates.
 
-# \U0001f4d8 Synchronous vs. Asynchronous Inputs: Key Definitions
+# Synchronous vs. Asynchronous Inputs: Key Definitions
 
 This document provides a quick reference for the fundamental concepts of synchronous and asynchronous inputs in the context of flip-flops and sequential logic.
 
 ---
 
-## \u23f0 Synchronous Inputs
+## Synchronous Inputs
 
 A **synchronous** input can only affect a flip-flop's state on the active edge of a clock signal. This means the input's effect is synchronized with the system clock, ensuring predictable and stable behavior.
 
@@ -142,7 +142,7 @@ A **synchronous** input can only affect a flip-flop's state on the active edge o
 
 
    
-## \u26a1 Asynchronous Inputs
+##  Asynchronous Inputs
 
 An **asynchronous** input affects a flip-flop's state immediately, without waiting for a clock edge. These inputs override the clock and synchronous data.
 
