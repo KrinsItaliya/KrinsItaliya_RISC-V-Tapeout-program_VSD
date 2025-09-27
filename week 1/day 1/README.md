@@ -104,11 +104,12 @@ It transforms RTL into a gate-level netlist and can map designs to a PDK\u2019s 
 
 ---
 
-##  Key Outcomes from Day 1
+## 🛠️ Highlights from Day 1
 
-- Understood **RTL Design** concepts using Verilog.  
-- Learned to simulate designs with **Icarus Verilog (iverilog)**.  
-- Visualized waveforms using **GTKWave**.  
-- Gained introduction to **Yosys** for logic synthesis.  
-- Performed synthesis with **Sky130 PDK standard cells**.  
-- Observed how RTL is transformed into a **gate-level netlist**.  
+- Explored the fundamentals of **RTL design** using the Verilog HDL.  
+- Simulated digital circuits with **Icarus Verilog (iverilog)** command-line tools.  
+- Analyzed signal behavior and timing through **GTKWave** waveform viewer.  
+- Got hands-on experience with **Yosys** for performing logic-level synthesis.  
+- Utilized **Sky130 standard cell library** to map RTL designs to physical gates.  
+- Observed how high-level code is converted into a **gate-level representation** after synthesis.
+ 
