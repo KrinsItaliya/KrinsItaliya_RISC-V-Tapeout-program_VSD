@@ -121,7 +121,7 @@ The most common cause is the **improper use of blocking (`=`) assignments to mod
 <img width="1638" height="1036" alt="bad_mux_gls_waveform" src="https://github.com/user-attachments/assets/2b800eaa-f30e-4f05-9a53-a007db22088a" />
 
 
-## \U0001f52c Labs Overview
+##  Labs Overview
 
 ### Labs on GLS and Synthesis-Simulation Mismatch
 These labs will guide you through running a **Gate-Level Simulation (GLS)** on a synthesized design. The primary goal is to compare the GLS waveform against the initial RTL simulation waveform to confirm that the synthesized hardware is functionally correct and matches the design intent.
