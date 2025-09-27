@@ -196,6 +196,7 @@ Loops are useful in hardware description, but it's essential to distinguish thei
    gtkwave tb_partial_case_assign.vcd
    ```
 2. output of gtk wave
+<img width="643" height="407" alt="partial_case_assign_Waveorm" src="https://github.com/user-attachments/assets/7311bf11-0a28-48fd-9182-39b2963bbe33" />
 
 
 3. open yosys
