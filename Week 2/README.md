@@ -2,8 +2,10 @@
 
 ## 🎯 Objective
 
-This week's task aims to deepen our understanding of **System-on-Chip (SoC)** architectures by exploring the design and simulation of the BabySoC platform. We will use tools like **Icarus Verilog** for HDL simulation and **GTKWave** for waveform analysis. The focus will be on understanding functional modeling, clock generation, and digital-to-analog conversion within the context of a compact SoC.
+To build a solid understanding of SoC fundamentals and practice functional modelling ofthe BabySoC using simulation tools (Icarus Verilog & GTKWave).
 
+---
+--> PART 1 (Conceptual understanding) :
 ---
 
 ## 💡 What is a System-on-Chip (SoC)?
@@ -514,7 +516,7 @@ Understanding System on Chip (SoC) and babySoC concepts provides valuable insigh
 
 ---
 
-## 🍼 babySoC
+##  babySoC
 
 - **Educational Focus**: babySoC provides a simplified, minimal SoC framework ideal for learning and experimentation.
 - **Core Components**: Typically includes a basic CPU (like RISC-V), memory, bus interconnect, clock, and minimal peripherals.
