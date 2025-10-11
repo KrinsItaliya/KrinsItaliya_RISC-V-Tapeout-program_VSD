@@ -1,15 +1,17 @@
 # 📘 Week 3 Task 3-  Post-Synthesis GLS & STA Fundamentals
 
-## 🎯 Objective
-**Static Timing Analysis** is one of the many techniques available to verify the timing of a digital design. 
+# 🎯 Objective: 
 
-An alternate approach used to verify the timing is the timing simulation which can verify the functionality as well as the timing of the design. 
+Static Timing Analysis (STA) is a crucial method used to verify the timing integrity of digital designs, ensuring they meet performance requirements before fabrication.
+Unlike timing simulation, which evaluates both functionality and timing using test vectors, STA performs an exhaustive analysis without applying real input patterns. This makes it significantly faster and more scalable for complex designs.
+STA is considered "static" because it analyzes the design's timing independently of the actual data values, focusing purely on path delays and constraints.
+In summary, Timing Analysis refers to two main approaches:
 
-The term timing analysis is used to refer to either of these two methods - static timing analysis, or the timing simulation. 
+🛠 Static Timing Analysis (STA) – structural, vectorless, fast
 
-Thus, timing analysis simply refers to the analysis of the design for timing issues.
+🎭 Timing Simulation – vector-based, functional + timing
 
-The STA is static since the analysis of the design is carried out statically and does not depend upon the data values being applied at the input pins. 
+✅ The goal of timing analysis is to detect and fix any timing violations (setup or hold) to ensure the design behaves correctly at the target frequency across all PVT corners.
 
 ---
 
@@ -559,13 +561,13 @@ min_max_sky130_fd_sc_hd__ff_n40C_1v76.lib.txt  min_max_sky130_fd_sc_hd__ss_n40C_
 
 ### 📈Timing Plots Across PVT Corners
 
-<img width="1213" height="524" alt="plot_minimum_slack_pvt_corner" src="https://github.com/user-attachments/assets/b7a4db77-2b9d-4590-9ba9-c5be608edf0e" />
-
 <img width="1213" height="524" alt="plot_tns_pvt_corner" src="https://github.com/user-attachments/assets/7cb9768c-b669-4412-9ce0-d728916d4d3e" />
 
 <img width="1213" height="524" alt="plot_tns_wns_corner" src="https://github.com/user-attachments/assets/641ddf0c-9f09-4808-b535-ba6b275d2759" />
 
 <img width="1213" height="524" alt="Worst_Slack_Max_Across_Corners" src="https://github.com/user-attachments/assets/8d4dfef6-c610-4dc4-a5d3-5bcc3b5e89db" />
+
+<img width="1213" height="524" alt="plot_minimum_slack_pvt_corner" src="https://github.com/user-attachments/assets/b7a4db77-2b9d-4590-9ba9-c5be608edf0e" />
 
 # 📊 Timing Analysis Report: SKY130 PVT Corners
 ## 📝 Overview
