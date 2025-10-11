@@ -62,12 +62,13 @@ stat -liberty src/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 ```
 ---
 
-![vsdbabysoc_rtl](output_week3_part1/vsdbabysoc_rtl.png)
-![netlist_clk_gate](output_week3_part1/netlist_clk_gate.png)
-![output_synthesis](output_week3_part1/output_synthesis.png)
-![printing_stestices_1](output_week3_part1/printing_stestices_1.png)
-![printing_stestices_2](output_week3_part1/printing_stestices_2.png)
-![printing_stestices_3](output_week3_part1/printing_stestices_3.png)
+<img width="1639" height="1037" alt="vsdbabysoc_rtl" src="https://github.com/user-attachments/assets/81821f90-44bc-4e5a-8119-6be428255914" />
+<img width="2928" height="1868" alt="image" src="https://github.com/user-attachments/assets/098ab080-20e0-46fb-9cb0-cef260c4f827" />
+<img width="1464" height="934" alt="output_synthesis" src="https://github.com/user-attachments/assets/2e4db790-f41b-488a-adf1-62cdb1c8a105" />
+<img width="1592" height="753" alt="printing_statistics_1" src="https://github.com/user-attachments/assets/cafd56b5-cde6-4985-bfcf-5d1cee5768d4" />
+<img width="1598" height="966" alt="printing_statistics_2" src="https://github.com/user-attachments/assets/64d3d877-a193-4ba0-808d-68bac8bb8d13" />
+<img width="1464" height="932" alt="printing_statistics_3" src="https://github.com/user-attachments/assets/8debfbd8-6a81-4355-a7e7-080c2ebe09e1" />
+<img width="1464" height="932" alt="printing_statistics_4" src="https://github.com/user-attachments/assets/c7c18f8f-821b-4633-b429-87c41777bcb0" />
 
 ## 🧩 Part 2 – Post-Synthesis GLS
 
