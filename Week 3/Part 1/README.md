@@ -98,9 +98,9 @@ gtkwave post_synth_sim.vcd
 ```
 ---
 
-![post_synth_uut_gtkwave](output_week3_part1/post_synth_uut_gtkwave.png)
-![post_synth_dac_gtkwave](output_week3_part1/post_synth_dac_gtkwave.png)
-![post_synth_pll_gtkwave](output_week3_part1/post_synth_pll_gtkwave.png)
+<img width="1639" height="1036" alt="post_synth_uut_gtkwave" src="https://github.com/user-attachments/assets/bfaf683d-e993-4803-9d10-36dcda9dfbba" />
+<img width="1639" height="777" alt="post_synth_pll_gtkwave" src="https://github.com/user-attachments/assets/19b7812e-fb67-43ee-8ba5-ff1a08adb736" />
+<img width="1646" height="829" alt="post_synth_dac_gtkwave" src="https://github.com/user-attachments/assets/0d8428d5-d78e-45ed-b751-a8cb3070e544" />
 
 # 🔍 Functional vs Gate-Level Simulation in Digital Design
 
