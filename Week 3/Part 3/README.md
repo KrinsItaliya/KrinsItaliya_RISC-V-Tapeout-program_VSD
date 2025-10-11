@@ -24,6 +24,7 @@ The STA is static since the analysis of the design is carried out statically and
 git clone https://github.com/parallaxsw/OpenSTA.git
 cd OpenSTA
 ```
+<img width="1008" height="145" alt="git clone openSTA" src="https://github.com/user-attachments/assets/4a972126-0303-4862-aaae-60bcf99b1c2d" />
 
 #### Step 2: Build the Docker Image
 ```bash
@@ -31,11 +32,14 @@ docker build --file Dockerfile.ubuntu22.04 --tag opensta .
 ```
 This builds a Docker image named opensta using the provided Ubuntu 22.04 Dockerfile. All dependencies are installed during this step.
 
+<img width="1625" height="365" alt="Build_docker_files" src="https://github.com/user-attachments/assets/85549a74-3b63-4504-bc74-783d8acec486" />
+
 #### Step 3: Run the OpenSTA Container
 To run a docker container using the OpenSTA image, use the -v option to docker to mount direcories with data to use and -i to run interactively.
 ```bash
 docker run -i -v $HOME:/data opensta
 ```
+<img width="848" height="149" alt="docker_run" src="https://github.com/user-attachments/assets/806fd592-9763-49ae-bf60-bd7546d155d0" />
 
 
 You now have OpenSTA installed and running inside a Docker container. After successful installation, you will see the % prompt—this indicates that the OpenSTA interactive shell is ready for use.
@@ -52,6 +56,10 @@ set_input_delay -clock clk 0 {in1 in2}
 report_checks
 ```
 _This flow is useful for quick testing and debugging without writing a full TCL script._
+
+<img width="890" height="502" alt="nangate45_slow_max_path_report" src="https://github.com/user-attachments/assets/14525e03-8a01-4a92-a779-09496bfac11c" />
+
+<img width="963" height="817" alt="nangate45_slow_min_path_report" src="https://github.com/user-attachments/assets/0f8f4d78-bf43-41ed-b118-0245f8396111" />
 
 
 **Note:** We used report_checks here because only the slow liberty file (nangate45_slow.lib.gz) is loaded. 
@@ -86,7 +94,7 @@ read_verilog example1.v
 synth -top top
 show
 ```
-
+<img width="1642" height="1012" alt="yosys_synthesis_output" src="https://github.com/user-attachments/assets/afe8e419-1290-400b-a97b-0546be6ef04e" />
 
 2️⃣ for ***nangate45_fast.lib.gz*** file
 Once inside the OpenSTA shell (% prompt), you can perform a basic static timing analysis using the following inline commands:
@@ -102,6 +110,25 @@ report_checks -path_delay min_max
 report_checks -path_delay min
 ```
 _This flow is useful for quick testing and debugging without writing a full TCL script._
+
+<img width="839" height="542" alt="nangate45_fast_max_path_report" src="https://github.com/user-attachments/assets/e795f867-3604-4194-9cf8-ee64e4bf6094" />
+
+<img width="839" height="514" alt="nangate45_fast_min_max_path_report_1" src="https://github.com/user-attachments/assets/c1bac8cc-09d2-4573-b589-814acd156d22" />
+
+<img width="839" height="514" alt="nangate45_fast_min_max_path_report_2" src="https://github.com/user-attachments/assets/fa68553a-cc17-46ed-bc9f-d50f253a6038" />
+
+<img width="833" height="514" alt="nangate45_fast_min_path_report" src="https://github.com/user-attachments/assets/eb698b87-fed9-407d-8ca8-ccde08f7a66e" />
+
+# output of synthesis :
+🛠️ Here are the commands for Yosys synthesis for example1.v run the following commends in the cd VSDbabysoc/opensta/examples this folder:
+```bash
+yosys
+read_liberty -lib nangate45_fast.lib
+read_verilog example1.v
+synth -top top
+show
+```
+<img width="1630" height="1041" alt="yosys_synthesis_output_fast" src="https://github.com/user-attachments/assets/1baee275-0c06-40f3-af66-d932608eb949" />
 
 
 3️⃣ for ***nangate45_typ.lib.gz*** file
@@ -119,7 +146,23 @@ report_checks -path_delay min
 ```
 _This flow is useful for quick testing and debugging without writing a full TCL script._
 
+<img width="1024" height="791" alt="nangate45_typical_max_path_report " src="https://github.com/user-attachments/assets/12685854-02c3-420c-a24e-90513e8a14f9" />
 
+<img width="948" height="996" alt="nangate45_typical_min_max_path_report " src="https://github.com/user-attachments/assets/e600b55a-dbac-4ba0-95f2-b6feb010445c" />
+
+<img width="764" height="518" alt="nangate45_typical_min_path_report " src="https://github.com/user-attachments/assets/b753f208-6542-4990-a106-7c9cfc0c721d" />
+
+# output of synthesis :
+🛠️ Here are the commands for Yosys synthesis for example1.v run the following commends in the cd VSDbabysoc/opensta/examples this folder:
+```bash
+yosys
+read_liberty -lib nangate45_typical.lib
+read_verilog example1.v
+synth -top top
+show
+```
+
+<img width="1641" height="1042" alt="yosys_synthesis_output_typical" src="https://github.com/user-attachments/assets/79b1c16b-ebe3-467d-a515-8d2c69e304e6" />
 
 ## SPEF-Based timing anylysis
 
@@ -140,6 +183,7 @@ create_clock -name clk -period 10 {clk1 clk2 clk3}
 set_input_delay -clock clk 0 {in1 in2}
 report_checks
 ```
+<img width="730" height="693" alt="spef_nangate_slow_report_check" src="https://github.com/user-attachments/assets/d2cfaedb-2ab7-4498-8be3-2bfd13e4c81d" />
 
 
 ### more options to explore
@@ -150,7 +194,7 @@ Reports timing paths with 4-digit precision and shows the net capacitance at eac
 ```bash
 report_checks -digits 4 -fields capacitance ## report capacitance per stage
 ```
-
+<img width="902" height="548" alt="spef_nangate45_slow_report_capacitance" src="https://github.com/user-attachments/assets/7b3ced2a-9a44-4d65-8864-572a22c56103" />
 
 **<ins>Report Timing with Capacitance, Slew, Input Pins, and Fanout</ins>**
 
@@ -158,6 +202,7 @@ Report timing with capacitance, slew, input pins, and fanout per stage.
 ```bash
 report_checks -digits 4 -fields [list capacitance slew input_pins fanout]       ###Report Timing with Capacitance, Slew, Input Pins, and Fanout
 ```
+<img width="902" height="574" alt="spef_nangate45_slow_report_slew_fanout_check" src="https://github.com/user-attachments/assets/9a5a1131-e814-4972-803d-fa5729c9cd20" />
 
 
 **<ins>Report Total and Component Power</ins>**
@@ -170,6 +215,8 @@ Design power is reported separately for combinational, sequential, macro and pad
 ```bash
 report_power ### reort total and component power
 ```
+<img width="898" height="263" alt="spef_nangate45_slow_report_power" src="https://github.com/user-attachments/assets/c4118784-a163-4d93-8ed5-b2b095dec22d" />
+
 
 **<ins>Report Pulse Width Checks</ins>**
 
@@ -179,6 +226,8 @@ If pins is not specified all clock network pins are reported.
 ```bash
 report_pulse_width_checks ### report_pulse_width_check
 ```
+<img width="859" height="218" alt="spef_nangate45_slow_report_pulsewidth" src="https://github.com/user-attachments/assets/07fa8c29-346a-4f4d-a3d3-e15dbeaa9ad4" />
+
 
 **<ins>Report Units </ins>**
 
@@ -186,6 +235,7 @@ Report the units used for command arguments and reporting.
 ```bash
 report_units  ### report_units
 ```
+<img width="859" height="381" alt="spef_nangate45_slow_report_units" src="https://github.com/user-attachments/assets/b68bc6e7-be01-412c-8c06-2ba1eb97633c" />
 
 
 2️⃣ for ***nangate45_fast.lib.gz*** file
@@ -201,6 +251,7 @@ create_clock -name clk -period 10 {clk1 clk2 clk3}
 set_input_delay -clock clk 0 {in1 in2}
 report_checks
 ```
+<img width="730" height="540" alt="spef_nangate45_fast_report_check" src="https://github.com/user-attachments/assets/a6e872c6-cc1a-44f7-90b4-c9678e9cd699" />
 
 
 ### more options to explore
@@ -212,8 +263,18 @@ report_power ### reort total and component power
 report_pulse_width_checks ### report_pulse_width_check
 report_units  ### report_units
 ```
+<img width="809" height="549" alt="spef_nangate45_fast_report_capacitance" src="https://github.com/user-attachments/assets/e95e1052-e971-4738-855b-490e3697ea82" />
 
-3️⃣ for ***nangate45_fast.lib.gz*** file
+<img width="809" height="574" alt="spef_nangate45_fast_report_slew" src="https://github.com/user-attachments/assets/21d6fede-a7d8-4ec8-bda0-ab83ea17df89" />
+
+<img width="809" height="331" alt="spef_nangate45_fast_report_power" src="https://github.com/user-attachments/assets/34850d5a-3dc6-429e-b223-3694e9e33872" />
+
+<img width="809" height="219" alt="spef_nangate45_fast_report_pulse_width" src="https://github.com/user-attachments/assets/f3f312fd-4ecb-4b54-8c4c-403b03f5847b" />
+
+<img width="658" height="175" alt="spef_nangate45_fast_report_units" src="https://github.com/user-attachments/assets/bf4dc0cc-f993-4ee7-a46d-17f521d021fb" />
+
+
+3️⃣ for ***nangate45_typical.lib.gz*** file
 ```shell
 docker run -i -v $HOME:/data opensta
 ```
@@ -226,7 +287,7 @@ create_clock -name clk -period 10 {clk1 clk2 clk3}
 set_input_delay -clock clk 0 {in1 in2}
 report_checks
 ```
-
+<img width="642" height="560" alt="spef_nangat45_typical_report_check" src="https://github.com/user-attachments/assets/8774a081-35a7-4bef-9e9e-f362121d2906" />
 
 ### more options to explore
 
@@ -237,6 +298,15 @@ report_power ### reort total and component power
 report_pulse_width_checks ### report_pulse_width_check
 report_units  ### report_units
 ```
+<img width="642" height="560" alt="SPEF_nangate45_typical_report_capacitance" src="https://github.com/user-attachments/assets/14af1ba1-e78b-49f4-a153-5dba43ebf167" />
+
+<img width="845" height="597" alt="SPEF_nangate45_typical_report_slew" src="https://github.com/user-attachments/assets/b585181a-d47c-44ab-9f23-ead11ce07b20" />
+
+<img width="845" height="250" alt="SPEF_nangate45_typical_report_power" src="https://github.com/user-attachments/assets/aa60eb06-2cc9-44dc-aac3-db0a3c5aeaab" />
+
+<img width="845" height="216" alt="SPEF_nangate45_typical_report_pulse_width" src="https://github.com/user-attachments/assets/2cfe94ad-6e3f-4815-a8bb-8bef0d41550b" />
+
+<img width="514" height="170" alt="SPEF_nangate45_typical_report_units" src="https://github.com/user-attachments/assets/80c947dc-e1a7-42b5-ad04-57694273a2fc" />
 
 
 ### Timing Analysis Using a TCL Script
@@ -291,6 +361,7 @@ This absolute path ensures that OpenSTA can locate and execute the script correc
 
 This method ensures repeatability and makes it easy to maintain reusable timing analysis setups for your designs.
 
+<img width="1648" height="984" alt="timing_analysis_using_tcl_file" src="https://github.com/user-attachments/assets/7581f162-9242-449c-aacd-8c4d5324546a" />
 
 
 ### VSDBabySoC basic timing analysis
@@ -389,6 +460,7 @@ This should allow OpenSTA to parse the Liberty file without throwing syntax erro
 
 After fixing the Liberty file comment syntax as shown above, you can rerun the script to perform complete timing analysis for VSDBabySoC:
 
+<img width="1312" height="618" alt="VsdBabySoc_timing_analysis_basic" src="https://github.com/user-attachments/assets/7808c5a8-fd1a-410d-9f82-e85d352da159" />
 
 
 ### VSDBabySoC PVT Corner Analysis (Post-Synthesis Timing)
@@ -407,7 +479,7 @@ _These represent the **slowest** operating conditions._
 _These represent the **fastest** operating conditions._
 
  **Timing libraries** required for this analysis can be downloaded from:  
-
+🔗 [Skywater PDK - sky130_fd_sc_hd Timing Libraries](https://github.com/efabless/skywater-pdk-libs-sky130_fd_sc_hd/tree/master/timing)
 
 Below is the script that can be used to perform STA across the PVT corners for which the Sky130 Liberty files are available.
 ```bash
@@ -487,9 +559,60 @@ min_max_sky130_fd_sc_hd__ff_n40C_1v76.lib.txt  min_max_sky130_fd_sc_hd__ss_n40C_
 
 ### 📈Timing Plots Across PVT Corners
 
+<img width="1213" height="524" alt="plot_minimum_slack_pvt_corner" src="https://github.com/user-attachments/assets/b7a4db77-2b9d-4590-9ba9-c5be608edf0e" />
 
+<img width="1213" height="524" alt="plot_tns_pvt_corner" src="https://github.com/user-attachments/assets/7cb9768c-b669-4412-9ce0-d728916d4d3e" />
 
+<img width="1213" height="524" alt="plot_tns_wns_corner" src="https://github.com/user-attachments/assets/641ddf0c-9f09-4808-b535-ba6b275d2759" />
 
+<img width="1213" height="524" alt="Worst_Slack_Max_Across_Corners" src="https://github.com/user-attachments/assets/8d4dfef6-c610-4dc4-a5d3-5bcc3b5e89db" />
+
+# 📊 Timing Analysis Report: SKY130 PVT Corners
+## 📝 Overview
+This report presents a visual and analytical summary of the timing performance of a design using the Sky130 standard cell library across multiple PVT (Process, Voltage, Temperature) corners.
+The following four timing metrics are analyzed:
+✅ TNS (Total Negative Slack)
+✅ WNS (Worst Negative Slack)
+✅ Worst Slack Max
+✅ Worst Slack Min
+All are plotted across typical, fast, and slow corners extracted from .lib files like:
+```
+sky130_fd_sc_hd__tt_025C_1v80.lib
+sky130_fd_sc_hd__ff_100C_1v95.lib
+sky130_fd_sc_hd__ss_n40C_1v28.lib
+...
+```
+📈 Graph 1: Total Negative Slack (TNS)
+What it shows: Cumulative sum of all negative slack paths.
+Key Observations:
+FF and TT corners: TNS = 0 → ✅ No setup timing violations.
+SS corners (especially ss_n40C_1v28): TNS = -36861.41 ns → ❌ Severe violations.
+
+📉 Graph 2: Worst Negative Slack (WNS)
+What it shows: The most critical (most negative) timing path.
+Key Observations:
+FF and TT corners: WNS = 0 → ✅ Timing met.
+Worst case: ss_n40C_1v28 with WNS = -51.20 ns → ❌ Major setup timing failure in this corner.
+
+📊 Graph 3: Worst Slack Max
+What it shows: The maximum slack value of the worst timing path per corner (i.e., best-case performance of the worst path).
+Key Observations:
+Best margin: +3.71 ns in ff_100C_1v95 → ✅ Excellent performance under ideal conditions.
+SS corners have negative values → ❌ Poor performance under slow conditions.
+
+📈 Graph 4: Worst Slack Min
+What it shows: The minimum slack value of the worst path (i.e., worst-case slack per corner).
+Key Observations:
+All values are positive → ✅ Timing is technically met in all corners.
+Best slack: 1.83 ns at ss_n40C_1v28.
+Margins are smaller in FF corners (e.g., 0.196 ns).
+
+# 🧠 Summary & Conclusion :
+| Category            | FF Corners       | TT Corner        | SS Corners         |
+| ------------------- | ---------------- | ---------------- | ------------------ |
+| **TNS / WNS**       | ✅ Passed (0)     | ✅ Passed (0)     | ❌ Failing          |
+| **Worst Slack Max** | ✅ Good Margins   | ✅ Acceptable     | ❌ Margins Negative |
+| **Worst Slack Min** | ✅ Positive Slack | ✅ Positive Slack | ✅ Positive Slack   |
 
 
 
