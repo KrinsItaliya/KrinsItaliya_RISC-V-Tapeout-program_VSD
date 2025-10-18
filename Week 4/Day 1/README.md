@@ -160,7 +160,7 @@ plot -vdd#branch
 🖼️ Output :
 
 
-# Summary Table :
+## Summary Table :
 
 | Region                 | Condition         | Behavior                                |
 | ---------------------- | ----------------- | --------------------------------------- |
