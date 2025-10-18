@@ -158,3 +158,12 @@ ngspice day1_nfet_idvds_L2_W5.spice
 plot -vdd#branch
 ```
 🖼️ Output :
+
+
+# Summary Table :
+
+| Region                 | Condition         | Behavior                                |
+| ---------------------- | ----------------- | --------------------------------------- |
+| **Cutoff**             | Vgs < Vth         | Transistor OFF, no current flows        |
+| **Linear (Resistive)** | Vds < (Vgs - Vth) | Acts like a voltage-controlled resistor |
+| **Saturation**         | Vds ≥ (Vgs - Vth) | Id becomes nearly constant              |
