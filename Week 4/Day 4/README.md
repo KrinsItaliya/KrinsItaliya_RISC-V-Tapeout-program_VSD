@@ -1,4 +1,3 @@
-
 # 🔊 [Day-4] CMOS Noise Margin – SPICE Simulation using Sky130
 
 This module explores the **Noise Margin** characteristics of a **CMOS inverter** using SPICE simulation with the Sky130 PDK. Noise Margin is critical to ensure reliable logic-level operation under real-world noise and variation conditions.
@@ -45,11 +44,11 @@ The CMOS inverter’s **Voltage Transfer Characteristic (VTC)** helps visualize:
 
 📷 *Ideal vs Practical Noise Margins:*
 
-![Ideal vs Practical](output_week4/noise_margin_ideal_practical.jpeg)
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/e90945b7-5a74-4929-8508-a1f1da389a64" />
 
 📷 *Noise Margin Regions on VTC:*
 
-![VTC Curve with NMH/NML](output_week4/noise_margin.jpeg)
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/4096e20a-95b0-4ba8-990d-e28a196b0b8a" />
 
 ---
 
@@ -92,11 +91,11 @@ Adjusting PMOS width affects:
 
 📷 *Comparison of noise margins with different PMOS sizes:*
 
-![Comparison](output_week4/noise_margin_comparison.jpeg)
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/473338f6-cb9d-4c06-a806-82f58763ab5b" />
 
 📷 *Summary Diagram:*
 
-![Summary](output_week4/noise_margin_summary.jpeg)
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/a6f325db-a0a5-4ee7-b430-cee9cccc5a87" />
 
 ---
 
