@@ -181,6 +181,9 @@ plot -vdd#branch
 
 <img width="1176" height="1003" alt="output_week4:ngspice_w5_l2" src="https://github.com/user-attachments/assets/01285419-7140-46c1-8e38-bc26063958cf" />
 
+<img width="2138" height="1378" alt="image" src="https://github.com/user-attachments/assets/bfa94aaf-fe5b-49da-a8dc-ff9d1484f42f" />
+
+
 ## Summary Table :
 
 | Region                 | Condition         | Behavior                                |
