@@ -30,6 +30,8 @@ This creates a conductive channel that allows electrons to move from the drain t
 
 In NMOS devices, the current flow is due to electrons (majority carriers), and the strength of conduction is controlled by the applied gate voltage.
 
+<img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/1ee29181-1856-4fc5-926f-07aebe9aa471" />
+<img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/179899d9-05d0-48f9-86ff-62d2638cc51f" />
 ---
 
 ### 1.3 Strong Inversion and Threshold Voltage
@@ -41,6 +43,8 @@ If the gate voltage is below Vth, the MOSFET operates in the **weak inversion** 
 
 Thus, Vth marks the transition between OFF and ON states of the transistor.
 
+<img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/1ffe3d8a-a2f2-4a5d-ac92-52d7379f4739" />
+<img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/2e37b23d-5077-4334-81c6-adf0cb9f826f" />
 ---
 
 ### 1.4 Threshold Voltage with Positive Substrate Potential
@@ -49,6 +53,7 @@ The threshold voltage of a MOSFET is not constant — it depends on the **body b
 When a positive substrate potential is applied (for NMOS), it increases the depletion region under the gate, requiring a higher gate voltage to invert the channel.
 
 This is called the **body effect**. A higher body bias makes the transistor harder to turn ON since more gate voltage is required to form the conducting channel.
+
 
 ---
 
@@ -80,6 +85,9 @@ In the linear region:
 - As Vds increases, inversion charge near drain reduces, making curve slightly nonlinear
 
 ---
+
+![nmos_analysis](https://github.com/user-attachments/assets/58fdcec6-5017-45b7-ab20-40bfdfad64b8)
+
 
 ### 2.4 SPICE Conclusion to Resistive Operation
 
