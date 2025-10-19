@@ -117,6 +117,7 @@ Simulate the **VTC of a CMOS inverter** and extract **Noise Margins** for a give
 #### Step 1: Run ngspice
 ```bash
 ngspice day4_inv_noisemargin_wp1_wn036.spice
+plot -vdd#branch
 ```
 ## Output :
 
