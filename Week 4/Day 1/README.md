@@ -159,6 +159,9 @@ plot -vdd#branch
 ```
 🖼️ Output :
 
+<img width="1176" height="701" alt="spice_netlist_day1" src="https://github.com/user-attachments/assets/b50ab95e-c6d8-44f9-b221-dc971572d05b" />
+<img width="1176" height="1003" alt="output_week4:ngspice_w5_l2" src="https://github.com/user-attachments/assets/01285419-7140-46c1-8e38-bc26063958cf" />
+
 
 ## Summary Table :
 
