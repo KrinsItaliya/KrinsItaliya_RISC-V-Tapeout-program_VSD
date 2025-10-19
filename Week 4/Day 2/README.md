@@ -44,10 +44,8 @@ This means that as device dimensions shrink, the drain current no longer grows a
 SPICE simulations can plot Id–Vgs curves for both long and short channel devices to visualize this change in slope.
 
 ---
-
-![velocity_saturation](output_week4/velocity_saturation_1.jpeg)
-![velocity_saturation](output_week4/velocity_saturation_2.jpeg)
-
+<img width="1280" height="590" alt="image" src="https://github.com/user-attachments/assets/08366cca-6b5d-45c1-8253-0895e4789b79" />
+<img width="1280" height="590" alt="image" src="https://github.com/user-attachments/assets/be109863-b82a-42e7-8804-c94e66b76841" />
 ---
 
 ### 1.4 Velocity Saturation at Lower and Higher Electric Fields
@@ -65,7 +63,7 @@ Once the field exceeds the critical value (Ec), velocity saturation dominates an
 
 ---
 
-![velocity_saturation](output_week4/velocity_saturation_3.jpeg)
+<img width="1280" height="590" alt="image" src="https://github.com/user-attachments/assets/7f2b7c81-dce9-4747-ba4f-af783cfdab3c" />
 
 ---
 
@@ -169,3 +167,15 @@ This curve shows three distinct regions:
    - Vin is high  
    - NMOS conducts fully, PMOS is OFF  
    - Vout is pulled to GND (logic LOW)
+  
+
+
+
+
+
+
+
+
+
+
+
