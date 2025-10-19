@@ -106,6 +106,10 @@ This is the start of **saturation region**, where increasing Vds further does no
 
 ---
 
+<img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/afff5dd4-fb89-4820-9a67-d0a31e164191" />
+<img width="1280" height="800" alt="image" src="https://github.com/user-attachments/assets/b7a9795c-26fe-4d6d-82a5-be2567a54993" />
+
+
 ### 2.6 Drain Current Model for Saturation Region
 
 In the saturation region:
@@ -153,6 +157,12 @@ All values are taken from Sky130 Process Design Kit.
 
 ## 4. SPICE Simulation
 
+<img width="1280" height="590" alt="image" src="https://github.com/user-attachments/assets/340af331-3dcf-461c-b767-3fccbce3233a" />
+
+<img width="1280" height="590" alt="image" src="https://github.com/user-attachments/assets/e1a3ea1f-cff8-4912-bd3f-0be0f745fabe" />
+
+<img width="1280" height="590" alt="image" src="https://github.com/user-attachments/assets/76b88557-aaa3-4ee1-82e9-b03f57c6ab10" />
+
 ### 📁 Clone GitHub Repository
 
 ```bash
@@ -168,8 +178,8 @@ plot -vdd#branch
 🖼️ Output :
 
 <img width="1176" height="701" alt="spice_netlist_day1" src="https://github.com/user-attachments/assets/b50ab95e-c6d8-44f9-b221-dc971572d05b" />
-<img width="1176" height="1003" alt="output_week4:ngspice_w5_l2" src="https://github.com/user-attachments/assets/01285419-7140-46c1-8e38-bc26063958cf" />
 
+<img width="1176" height="1003" alt="output_week4:ngspice_w5_l2" src="https://github.com/user-attachments/assets/01285419-7140-46c1-8e38-bc26063958cf" />
 
 ## Summary Table :
 
