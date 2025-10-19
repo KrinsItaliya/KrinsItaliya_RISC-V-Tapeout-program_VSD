@@ -36,8 +36,8 @@ From this simulation, the switching threshold, gain, and noise margins can be ob
 ngspice day3_inv_tran_Wp084_Wn036.spice
 plot out vs time in
 ```
-![netlist_spice_inv_trns](output_week4/netlist_spice_inv_trns.png)
-![ngspice_inv_trns](output_week4/ngspice_inv_trns.png)
+<img width="1606" height="1270" alt="image" src="https://github.com/user-attachments/assets/37ae84ed-2816-4101-9927-40e6b1f034be" />
+<img width="1624" height="1028" alt="image" src="https://github.com/user-attachments/assets/cf9ef67a-5d28-42d2-bb58-bfabf62b7c05" />
 
 ### simulation for inverter vtc chateristices
 ### step-1:
@@ -45,8 +45,8 @@ plot out vs time in
 ngspice day3_inv_tran_Wp084_Wn036.spice
 plot out vs in
 ```
-![netlist_spice_inv_vtc](output_week4/netlist_spice_inv_vtc.png)
-![ngspice_inv_vtc](output_week4/ngspice_inv_vtc.png)
+<img width="1624" height="1254" alt="image" src="https://github.com/user-attachments/assets/2523ea60-f08b-4689-b193-205e8d40de43" />
+<img width="1718" height="962" alt="image" src="https://github.com/user-attachments/assets/33bef033-541f-4cc6-80a4-0c63a63df86e" />
 
 ## 2. Static Behavior Evaluation – CMOS Inverter Robustness and Switching Threshold
 
@@ -59,7 +59,7 @@ It determines how the inverter switches between logic states and plays a major r
 A well-designed inverter has its switching threshold close to the mid-point of the supply voltage, ensuring symmetrical switching characteristics.
 
 ---
-![switch_threshold](output_week4/switch_threshold.jpeg)
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/e7796a24-dde8-47ac-a880-bd1c942daa1d" />
 
 ### 2.2 Effect of Device Sizing on Switching Threshold
 
@@ -71,7 +71,8 @@ To balance this, the PMOS transistor is usually made wider to equalize the drive
 Proper sizing results in a symmetrical transfer curve and equal noise margins for both logic levels.
 
 ---
-![switch_threshold_comparision](output_week4/switch_threshold_comparision.jpeg)
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/d5eafe34-e4e7-41e7-aa2d-6b8ce3e72f95" />
+
 
 ### 2.3 Determining Transistor Sizing for Desired Threshold
 
@@ -82,8 +83,8 @@ This control helps in optimizing circuit behavior for speed, power, or robustnes
 This aspect is very important for digital design where uniform switching points ensure predictable logic operation across multiple gates.
 
 ---
-![switch_threshold_equations](output_week4/switch_threshold_equations_1.jpeg)
-![switch_threshold_equations_2](output_week4/switch_threshold_equations_2.jpeg)
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/9a0c6006-61bc-4e4b-bbde-3e7f40905759" />
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/30d159f5-f57e-4391-8e02-9f3322f19bb5" />
 
 ### 2.4 Static and Dynamic Simulation of CMOS Inverter
 
