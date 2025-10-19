@@ -168,7 +168,38 @@ This curve shows three distinct regions:
    - NMOS conducts fully, PMOS is OFF  
    - Vout is pulled to GND (logic LOW)
   
+### 2.8 SPICE Lab for CMOS Inverter VTC
 
+### simulation for drain current v/s drain to source volatge:
+### step-1:
+```bash
+ngspice day2_nfet_idvds_L015_W039.spice
+plot -vdd#branch 
+```
+<img width="1626" height="1358" alt="image" src="https://github.com/user-attachments/assets/a8ffdf0e-6304-4310-9ba1-50f38b13cea9" />
+<img width="1608" height="942" alt="image" src="https://github.com/user-attachments/assets/b49de509-ba2d-499c-87de-07754cb1fe6b" />
+<img width="1502" height="912" alt="image" src="https://github.com/user-attachments/assets/69037f5c-bd2f-454f-ad25-ad523a6c462d" />
+
+### simulation for draing current v/s gate to source voltage
+### step-1:
+```bash
+ngspice day2_nfet_idvgs_L015_W039.spice
+plot -vdd#branch
+```
+<img width="1668" height="1306" alt="image" src="https://github.com/user-attachments/assets/e7506141-7a3e-426f-94ca-e50be05a3139" />
+<img width="1606" height="1008" alt="image" src="https://github.com/user-attachments/assets/eea45cde-1885-484a-b4bc-2c74054ce46b" />
+<img width="1480" height="1004" alt="image" src="https://github.com/user-attachments/assets/6b7ee24d-4641-4b15-9dc8-0e67a8c5513d" />
+
+
+## 🧩 Summary Table
+
+| Concept | Description | Key Observation |
+|----------|--------------|----------------|
+| Velocity Saturation | Limiting of carrier velocity under high fields | Reduces current and transconductance in short-channel devices |
+| Long vs Short Channel | Short-channel devices show earlier current saturation | Id–Vgs becomes linear instead of quadratic |
+| CMOS Inverter | Basic logic gate made from PMOS and NMOS | Converts input logic to complementary output |
+| VTC | Graph of Vout vs Vin | Defines switching threshold and noise margins |
+| SPICE Simulation | DC sweep of Vin | Verifies theoretical VTC and device behavior |
 
 
 
